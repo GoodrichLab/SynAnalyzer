@@ -51,15 +51,18 @@ originally used here. These are detailed below and can be seen in the demo datas
   * HairCellsReconstructed (i.e., the number of hair cells for each synaptic marker puncta were reconstructed in Imaris)
   * ImageName (note that the code expects all image filenames to follow the convention shown in the demo files and below)
     * Image naming convention: SampleID.TwoCharacterTurnID.TwoCharacterRegionID.Zs.NumberOfFluorescentChannelsC.czi
-
+![Screenshot of the required imaging metadata spreadsheet](/Assets/ImagingMetadataCSV.png)
 
 * SynAnalyzer_BatchName.Metadata.Samples.csv (note that this is a good sheet to also track animal information and any other experiment
 data associated with the sample):
   * SampleID
   * AnimalID
-  * Group    
+  * Group
+![Screenshot of the required sample metadata spreadsheet](/Assets/SampleMetadataCSV.png)    
 
 ## Step 1: Setting up the batch directory
 Although SynAnalyzer can be adopted to analyze a single image, it is intended to run on a batch of images that are saved in 
 a dedicated repository that has all other required files. This directory should be given a unique batch name, as this helps
-to keep the data from unique experiments organized within a single batch. The bare minimum files required by 
+to keep the data from unique experiments organized within a single batch. The bare minimum files required by SynAnalyzer, and
+how they are expected to be organized, is shown below.
+![Screenshot of the required initial directory organization](/Assets/SynAnalyzer_ExampleBatch.InitialDirectoryStructure.png)
