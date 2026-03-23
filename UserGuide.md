@@ -51,6 +51,7 @@ originally used here. These are detailed below and can be seen in the demo datas
   * HairCellsReconstructed (i.e., the number of hair cells for each synaptic marker puncta were reconstructed in Imaris)
   * ImageName (note that the code expects all image filenames to follow the convention shown in the demo files and below)
     * Image naming convention: SampleID.TwoCharacterTurnID.TwoCharacterRegionID.Zs.NumberOfFluorescentChannelsC.czi
+   
 ![Screenshot of the required imaging metadata spreadsheet](/Assets/ImagingMetadataCSV.png)
 
 * SynAnalyzer_BatchName.Metadata.Samples.csv (note that this is a good sheet to also track animal information and any other experiment
@@ -58,11 +59,24 @@ data associated with the sample):
   * SampleID
   * AnimalID
   * Group
+
 ![Screenshot of the required sample metadata spreadsheet](/Assets/SampleMetadataCSV.png)    
 
 ## Step 1: Setting up the batch directory
 Although SynAnalyzer can be adopted to analyze a single image, it is intended to run on a batch of images that are saved in 
 a dedicated repository that has all other required files. This directory should be given a unique batch name, as this helps
 to keep the data from unique experiments organized within a single batch. The bare minimum files required by SynAnalyzer, and
-how they are expected to be organized, is shown below.
+how they are expected to be organized, is shown below as it is setup for the demo data. Note that both "PreSyn" and "PostSyn"
+files are not needed for the code to run. It is perfectly acceptable to run the code with just one set of surface reconstruction
+data.
+
 ![Screenshot of the required initial directory organization](/Assets/SynAnalyzer_ExampleBatch.InitialDirectoryStructure.png)
+
+## Step 2: Convert Imaris statistics files to Python-friendly dataframes
+Run file: 1_SynAnalyzer_ConvertImarisStatsFiles.ipynb
+In this step, the files exported from Imaris (one for each set of surface reconstructions where a single set is reconstructed 
+using the fluorescence intensity of a single channel in the image) are converted into Python-friendly dataframes and key
+metadata is added to each entry. Note that Imaris does sometimes alter the format of their statistics files and it may be 
+necessary to alter the example code provided to capture the appropriate values. Additionally, in order for the code to 
+properly convert xyz coordinates from their original values in microns to pixels, the code needs to know the voxel size of 
+the corresponding images. 
