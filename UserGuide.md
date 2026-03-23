@@ -38,3 +38,25 @@ the data for each image (e.g., PSD-based Paired Synapse Index, tdT+ Synapse Prop
 a new CSV file called "BatchMaster." In the final notebook of the source code, Python code reads in the BatchMaster file and the 
 XYZSummary file so that it can generate plots of the underlying data and the user can perform any desired statistical or secondary 
 analysis.
+
+## Step 1: Setting up the experiment metadata
+SynAnalyzer expects that image and experiment metadata is saved in two different CSV files with specific heading names. These
+heading names can be altered within the Python notebooks and ImageJ macro. However, it is easiest to follow the conventions 
+originally used here. These are detailed below and can be seen in the demo dataset files:
+* SynAnalyzer_BatchName.Metadata.Imaging.csv:
+  * SampleID
+  * Turn (i.e., which cochlear turn was imaged)
+  * RegionID (i.e., used in the case when multiple images are acquired from the same cochlear turn)
+  * Frequency (i.e., the corresponding tonotopic frequency of the imaged region)
+  * HairCellsReconstructed (i.e., the number of hair cells for each synaptic marker puncta were reconstructed in Imaris)
+  * ImageName (note that the code expects all image filenames to follow the convention shown in the demo files and below)
+    * Image naming convention: SampleID.TwoCharacterTurnID.TwoCharacterRegionID.Zs.NumberOfFluorescentChannelsC.czi
+* SynAnalyzer_BatchName.Metadata.Samples.csv:
+  * SampleID
+  * AnimalID
+  * Group    
+
+## Step 1: Setting up the batch directory
+Although SynAnalyzer can be adopted to analyze a single image, it is intended to run on a batch of images that are saved in 
+a dedicated repository that has all other required files. This directory should be given a unique batch name, as this helps
+to keep the data from unique experiments organized within a single batch. The bare minimum files required by 
