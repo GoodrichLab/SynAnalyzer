@@ -19,15 +19,39 @@ on the size of the micrographs being analyzed and the number of thumbnails that 
 source code was only tested on a MacBook Pro and future users may need to optimize the code for their one usage.\
 The details of operating system, software, and environment in which this source code was developed is provided below:\
 * Hardware
-  * MacBook Pro, 2 TB Hard drive space
-  * 2.4 GHz 8-Core Intel Core i9
-  * 64 GB 2667 MHz DDR4
-  * Graphics: AMD Radeo Pro 5500 M 8 GB, Intel UHD Graphics 630 1536 MB
+ * MacBook Pro, 2 TB Hard drive space
+ * 2.4 GHz 8-Core Intel Core i9
+ * 64 GB 2667 MHz DDR4
+ * Graphics: AMD Radeo Pro 5500 M 8 GB, Intel UHD Graphics 630 1536 MB
 * Operative System: macOS Monterey Version 12.4
-* Python Environment    
+* Python Environment:
+ * Python 3.8.17
+ * Key packages (beyond standard Python environments): os, numpy, pandas, glob, xlrd, openpyxl,
+   datetime, matplotlib, seaborn, math, scipy
+* ImageJ version:
+ * ImageJ2
+ * Version: 2.14.0/1.54f
+ * Build: c89e8500e4     
 
 ## Installation Instructions
 Since this source code is a set of Python notebooks and ImageJ macros, there is no installation required.
 Python notebooks can be opened in a cloud-based platform such as Google Colab, which do not require that the user setup
 a dedicated environment. The ImageJ macros do not need to be installed as plugins and can simple be opened in ImageJ
-and run from within the program. 
+and run from within the program. For users just getting started with ImageJ it may be best to download ImageJ with
+the set of additional plugins found in FIJI.\
+
+## Demo
+Users are strongly encouraged to run the demo code with the provided test images prior to any attempts to use this
+code for their own data sets. It is largely expected that users will need to modify this code in order for it to
+work with their own data. To run this demo, proceed with the steps below:
+1. Clone this repository (refer to GitHub documentation for additional details)
+2. Setup their local Python environment (refer to Python community resources for additional details)
+3. Setup their local ImageJ software (refer to ImageJ documentation for additional details)
+4. Save the demo files to their local hard drive
+5. Update the filepath names in the code to ensure that all inputs are drawn from the appropriate location and that all
+outputs are saved in a known location.
+6. Follow the steps provided in the User Guide
+
+## Instructions for use
+Please refer to the steps above under the "Demo" heading before attempting to use this code for a custom dataset.\
+Users are also strongly encouraged to review the User Guide, which includes a psuedocode description of the codes functionality.
