@@ -43,7 +43,7 @@ analysis.
 SynAnalyzer expects that image and experiment metadata is saved in two different CSV files with specific heading names. These
 heading names can be altered within the Python notebooks and ImageJ macro. However, it is easiest to follow the conventions 
 originally used here. These are detailed below and can be seen in the demo dataset files:
-* SynAnalyzer_BatchName.Metadata.Imaging.csv:
+* SynAnalyzer_BatchName.Metadata.Imaging.csv (note that this is a good sheet to also track all imaging parameters used for easy reference):
   * SampleID
   * Turn (i.e., which cochlear turn was imaged)
   * RegionID (i.e., used in the case when multiple images are acquired from the same cochlear turn)
@@ -51,7 +51,10 @@ originally used here. These are detailed below and can be seen in the demo datas
   * HairCellsReconstructed (i.e., the number of hair cells for each synaptic marker puncta were reconstructed in Imaris)
   * ImageName (note that the code expects all image filenames to follow the convention shown in the demo files and below)
     * Image naming convention: SampleID.TwoCharacterTurnID.TwoCharacterRegionID.Zs.NumberOfFluorescentChannelsC.czi
-* SynAnalyzer_BatchName.Metadata.Samples.csv:
+
+
+* SynAnalyzer_BatchName.Metadata.Samples.csv (note that this is a good sheet to also track animal information and any other experiment
+data associated with the sample):
   * SampleID
   * AnimalID
   * Group    
