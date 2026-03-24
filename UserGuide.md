@@ -68,7 +68,7 @@ how they are expected to be organized, is shown below as it is setup for the dem
 files are not needed for the code to run. It is perfectly acceptable to run the code with just one set of surface reconstruction
 data.
 
-![Screenshot of the required initial directory organization](/Assets/2_ConvertImarisStatsScreenshots/SynAnalyzer_ExampleBatch.InitialDirectoryStructure.png)
+![Screenshot of the required initial directory organization](/Assets/1_ConvertImarisStatsScreenshots/Dependency2_DirectoryStructure.png)
 
 ## Step 2: Running the source code file 1_SynAnalyzer_ConvertImarisStatsFiles.ipynb
 In this step, the files exported from Imaris (one file for each set of surface reconstructions where a single set is reconstructed 
@@ -78,7 +78,20 @@ necessary to alter the example code provided to capture the appropriate values. 
 properly convert xyz coordinates from their original values in microns to pixels, the code needs to know the voxel size of 
 the corresponding images. 
 
-(to be completed: add screenshots of files that are produced in this step)
+### Dependencies and Inputs
+The preceeding steps must be completed before this notebook can be ran successfully. Additionally, the code needs to be updated for
+whatever format the Imaris Statistics Files take. 
+
+This notebook requires the Imaris Statistics Files as inputs. An example of one of the sheets referenced in the Demo is shown below.
+![Screenshot of one page in one of the Imaris Stats files in the Demo data set](/Assets/Dependency1_ImarisStatsFile.png)
+
+### Outputs
+After the code runs, the new XYZCSV files will be saved in a dedicated subfolder, as shown below.
+![Screenshot of the batch directory after running the ConvertImarisStatsFiles notebook](/Assets/Output_UpdatedFiles.png)
+
+These files can be opened in Excel. However, users are strongly urged to not edit their contents. If necessary, fresh versions can be generated
+by rerunning the notebook and this will not impact any work already completed in steps 3 and 4 below. 
+![Screenshot of the XYZCSV files generated in this step.](/Assets/Output_XYZCSV.png)
 
 ## Step 3: Running the source code file 2_SynAnalyzer_AnalyzeXYZs.ijm 
 (to be completed)
