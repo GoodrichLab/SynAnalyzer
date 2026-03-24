@@ -239,7 +239,39 @@ The screenshots below are provided to assist potential users with navigating the
 ![Screenshot of updated log window.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_23.png)
 
 ## Step 4: Running the source code file 3_SynAnalyzer_CompileXYZData.ipynb
-(to be completed)
+### Overview
+In this final step of the pipeline, all of the XYZ data generated in the ImageJ macro run is compiled. The Python notebook reads in the CSV files for each
+set of surfaces, adds their data to dataframe, and then performs additional calculations. This includes:
+* For every surface:
+ * Image maximum normalized tdT intensity 
+ * Control median normalized volume 
+* For every image:
+ * Ribbon- and PSD-based Paired Synapse Index
+ * Ribbon- and PSD-based Unpaired Index
+ * TdT Positive Synapse Proportion
+ * TdT Positive Unpaired Proportion
+ * Autoclassified tdT+ synapse proportion
+ * Uncertain Synapse Proportion (alone and with tdT+ or tdT- synapses)
+
+All of this information is saved in two CSV files, as described below.
+
+### Dependencies and Inputs
+Sucessfully running this code requires the completion of all steps above. The main input to this notebook are the fully annotated XYZ CSV files in the SAR.Analysis folder,
+as shown below. 
+
+![Screenshot of Demo XYZ files that required inputs for this step.](/Assets/3_CompileXYZDataScreenshots/1_KeyInputsForCompileXYZ.png)
+
+### Outputs
+Following the completion of this code run, there will be two CSV files added to the SAR.Results folder, shown below, within a timestamped subfolder. These
+files are the XYZSummary sheet that contains an entry for 
+
+
+
+
+
+
+
+
 
 ## Step 5: Statistical Analysis
 We recommend importing the data saved in Batch Master and XYZSummary files into Prism for statistical analysis. It is also
