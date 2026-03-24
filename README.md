@@ -1,17 +1,17 @@
 # README
 ![SynAnalyzer logo showing an inner hair cell on a coordinate axes with a magnifying glass highlighting type I spiral\
-ganglion neuron terminals at the basoleratl surface of the inner hair cell.](/Assets/0_SynAnalyzerLogo_Small.png)
+ganglion neuron terminals at the basoleratl surface of the inner hair cell.](/Assets/Logos/0_SynAnalyzerLogo_Small.png)
 
 ## Authors and Acknowledgement
 This repository and its content were created and will be maintained by Joy Franco. However, all authors of the accompanying
 manuscript contributed their ideas for how the code should function and what features would be necessary. For that reason,
 please cite our manuscript when referring to this repository. Currently this manuscript can be cited via the Biorxiv preprint (link below).
-This information will be updated at the time of publication.
+Additional citation information will be provided at the time of publication.
 
 Thumbnail arrays of synapses and synapse scoring process was inspired by Liberman, Wang, and Liberman 2011 (DOI:10.1523/JNEUROSCI.3389-10.2011).
 
 ## Project Description
-This repository contains the source code for the Franco et al manuscript, currently under revision at Nature Communications.
+This repository contains the source code for the Franco,...,Goodrich 2025 preprint, currently under revision at Nature Communications.
 The initial version of the manuscript is viewable on Biorxiv at https://www.biorxiv.org/content/10.1101/2025.08.27.672747v1.
 This code was used to generate the synapse and terminal arrays described in this manuscript. These arrays are composed of
 thumbnail sum intensity projection images (2 um x 2 um), centered at specified xyz coordinates. The code walks the user through
