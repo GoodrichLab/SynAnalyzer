@@ -1,0 +1,3 @@
+,ImageName,SampleID,AnimalID,Group,Freq,NoHCRecon,SurfacesAvailable,PostSyn_PairedSynapseIndex,PostSyn_UnpairedIndex,PostSyn_TdTPosPairedSynIndex,PostSyn_TdTPosUnpairedSynIndex,PostSyn_TdTPosPairedSynProp,PostSyn_TdTPosUnpairedSynProp,PostSyn_AutoTdTPosProp,PostSyn_PropTermUncSyns,PostSyn_PropTermPosAndUncSyns,PostSyn_PropTermNegAndUncSyns,PreSyn_PairedSynapseIndex,PreSyn_UnpairedIndex
+0,WSS_030.01.T2.01.Zs.4C,WSS_030.01,T060,Sham,32,15,['PostSyn' 'PreSyn'],17,0.6,9.8,0.133333333,0.576470588,0.222222222,0.662745098,0.133333333,0.709803922,0.423529412,16.46666667,0
+1,WSS_031.03.T3.01.Zs.4C,WSS_031.03,B017,Noise,32,16,['PostSyn' 'PreSyn'],7.9375,2.4375,3,0.625,0.377952756,0.256410256,0.338582677,0.062992126,0.440944882,0.622047244,7.875,0.875
