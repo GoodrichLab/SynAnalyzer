@@ -155,7 +155,29 @@ for every XYZCSV-image file pair that was analyzed.
 ### Screenshots for Key Macro Run Steps
 The screenshots below are provided to assist potential users with navigating the interactive macro. 
 
-1. 
+1. The macro can be launched from within ImageJ by dragging and dropping the file into the ImageJ toolbar (may not work for Windows users). Upon start up,
+   users will be asked to specify the full pathname to the main directory that contains the batch folder. We suggest altering the default pathname in the
+   macro code itself so that the user can just hit "ok" and accept the default path upon startup.
+
+![Screenshot of macro startup.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_02.png)
+
+2. After startup, the macro will begin iterating through all available raw images. The name of the file being analyzed is shown in the Log window.
+
+![Screenshot of analysis start.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_03.png)
+
+3. When the image opens, the user will have the option of making brightness/contrast or other adjustments that may help with visualizing morphology.
+
+![Screenshot of TIF generation.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_04.png)
+
+4. Once these adjustments are made and the TIF is saved, an annotated version of the maximum projection image will be generated with a dot at the
+   position of every XYZ location in question along with its surface ID. The user will be asked to confirm that these XYZs match the image. The
+   user completes this once for every set of surfaces for which there is XYZ data (i.e., "PreSyn" and "PostSyn" in the Demo).
+
+![Screenshot of XYZ-image pair confirmation for PreSyn XYZs.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_04.png)
+
+![Screenshot of XYZ-image pair confirmation for PostSyn XYZs.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_05.png)
+
+
 
 ## Step 4: Running the source code file 3_SynAnalyzer_CompileXYZData.ipynb
 (to be completed)
