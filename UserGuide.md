@@ -1,4 +1,7 @@
 # SynAnalyzer User Guide
+This User Guide is currently under construction. The basic information required for setting up the directory needed to 
+run the demo is provided below. However, additional guidance with regards to how the ImageJ macro works, the scoring process,
+and how the data is compiled will be provided ASAP.
 
 ## Overview
 This source code can be considered a semi-automated image analysis pipeline for quantifying the density of paired and
@@ -67,10 +70,23 @@ data.
 
 ![Screenshot of the required initial directory organization](/Assets/2_ConvertImarisStatsScreenshots/SynAnalyzer_ExampleBatch.InitialDirectoryStructure.png)
 
-## Step 2: Running the source code file: 1_SynAnalyzer_ConvertImarisStatsFiles.ipynb
+## Step 2: Running the source code file 1_SynAnalyzer_ConvertImarisStatsFiles.ipynb
 In this step, the files exported from Imaris (one file for each set of surface reconstructions where a single set is reconstructed 
 using the fluorescence intensity of a single channel in the image) are converted into Python-friendly dataframes and key
 metadata is added to each entry. Note that Imaris does sometimes alter the format of their statistics files and it may be 
 necessary to alter the example code provided to capture the appropriate values. Additionally, in order for the code to 
 properly convert xyz coordinates from their original values in microns to pixels, the code needs to know the voxel size of 
 the corresponding images. 
+
+(to be completed: add screenshots of files that are produced in this step)
+
+## Step 3: Running the source code file 2_SynAnalyzer_AnalyzeXYZs.ijm 
+(to be completed)
+
+## Step 4: Running the source code file 3_SynAnalyzer_CompileXYZData.ipynb
+(to be completed)
+
+## Step 5: Statistical Analysis
+We recommend importing the data saved in Batch Master and XYZSummary files into Prism for statistical analysis. It is also
+possible to do this with Python or R. Users are encouraged to use whichever approach is most appropriate for their applications.
+Both CSV files can be easily imported into Python, R, Matlab, etc as a dataframe for plotting or statistical analysis.
