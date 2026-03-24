@@ -3,7 +3,7 @@ This User Guide is currently under construction. The basic information required 
 run the demo is provided below. However, additional guidance with regards to how the ImageJ macro works, the scoring process,
 and how the data is compiled will be provided ASAP.
 
-## Overview
+## Psuedocode
 This source code can be considered a semi-automated image analysis pipeline for quantifying the density of paired and
 unpaired synaptic markers, their association with tdTomato (tdT) signal, and other properties in a given high-resolution
 micrograph of a wholemount preparation of cochlear sensory epithelium. To do this it relies on the user providing a
@@ -38,9 +38,14 @@ the data for each image (e.g., PSD-based Paired Synapse Index, tdT+ Synapse Prop
 a new CSV file called "BatchMaster." 
 
 ## Step 1: Setting up the experiment metadata
+### Overview
 SynAnalyzer expects that image and experiment metadata is saved in two different CSV files with specific heading names. These
 heading names can be altered within the Python notebooks and ImageJ macro. However, it is easiest to follow the conventions 
-originally used here. These are detailed below and can be seen in the demo dataset files:
+originally used here. These are detailed below and can be seen in the demo dataset files.
+
+### Dependencies and Inputs
+Completing this step requires that the information described below is available for all images.
+
 * SynAnalyzer_BatchName.Metadata.Imaging.csv (note that this is a good sheet to also track all imaging parameters used for easy reference):
   * SampleID
   * Turn (i.e., which cochlear turn was imaged)
@@ -60,7 +65,12 @@ data associated with the sample):
 
 ![Screenshot of the required sample metadata spreadsheet](/Assets/1_MetadataScreenshots/SampleMetadataCSV.png)    
 
-## Step 1: Setting up the batch directory
+### Outputs
+The final product of this step are the spreadsheets described above, saved in CSV format, following the naming structure shown in the Demo
+with a user specified, unique batch name.
+
+## Step 2: Setting up the batch directory
+### Overview
 Although SynAnalyzer can be adopted to analyze a single image, it is intended to run on a batch of images that are saved in 
 a dedicated repository that has all other required files. This directory should be given a unique batch name, as this helps
 to keep the data from unique experiments organized within a single batch. The bare minimum files required by SynAnalyzer, and
@@ -68,9 +78,17 @@ how they are expected to be organized, is shown below as it is setup for the dem
 files are not needed for the code to run. It is perfectly acceptable to run the code with just one set of surface reconstruction
 data.
 
+### Dependencies and Inputs
+To complete this step, the user must have metadata sheets setup according to description in Step 1 above. They must also have
+access to the raw micrographs that will be analyzed and that Imaris Statistics Files that will be referenced in Step 3 below.
+
+### Outputs
+At the end of this step the user will have a directory that appears as shown below.
+
 ![Screenshot of the required initial directory organization](/Assets/1_ConvertImarisStatsScreenshots/Dependency2_DirectoryStructure.png)
 
-## Step 2: Running the source code file 1_SynAnalyzer_ConvertImarisStatsFiles.ipynb
+## Step 3: Running the source code file 1_SynAnalyzer_ConvertImarisStatsFiles.ipynb
+### Overview
 In this step, the files exported from Imaris (one file for each set of surface reconstructions where a single set is reconstructed 
 using the fluorescence intensity of a single channel in the image) are converted into Python-friendly dataframes and key
 metadata is added to each entry. Note that Imaris does sometimes alter the format of their statistics files and it may be 
@@ -80,21 +98,26 @@ the corresponding images.
 
 ### Dependencies and Inputs
 The preceeding steps must be completed before this notebook can be ran successfully. Additionally, the code needs to be updated for
-whatever format the Imaris Statistics Files take. 
+whatever format the Imaris Statistics Files take so that the correct sheets, columns, etc. are referenced. 
 
 This notebook requires the Imaris Statistics Files as inputs. An example of one of the sheets referenced in the Demo is shown below.
+
 ![Screenshot of one page in one of the Imaris Stats files in the Demo data set](/Assets/1_ConvertImarisStatsScreenshots/Dependency1_ImarisStatsFile.png)
 
 ### Outputs
 After the code runs, the new XYZCSV files will be saved in a dedicated subfolder, as shown below.
+
 ![Screenshot of the batch directory after running the ConvertImarisStatsFiles notebook](/Assets/1_ConvertImarisStatsScreenshots/Output_UpdatedFiles.png)
 
 These files can be opened in Excel. However, users are strongly urged to not edit their contents. If necessary, fresh versions can be generated
-by rerunning the notebook and this will not impact any work already completed in steps 3 and 4 below. 
+by rerunning the notebook and this will not impact any work already completed in steps 3 and 4 below.
+
 ![Screenshot of the XYZCSV files generated in this step.](/Assets/1_ConvertImarisStatsScreenshots/Output_XYZCSV.png)
 
 ## Step 3: Running the source code file 2_SynAnalyzer_AnalyzeXYZs.ijm 
-(to be completed)
+### Overview
+
+
 
 ## Step 4: Running the source code file 3_SynAnalyzer_CompileXYZData.ipynb
 (to be completed)
