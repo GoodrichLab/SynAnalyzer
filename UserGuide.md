@@ -1,7 +1,4 @@
 # SynAnalyzer User Guide
-This User Guide is currently under construction. The basic information required for setting up the directory needed to 
-run the demo is provided below. However, additional guidance with regards to how the ImageJ macro works, the scoring process,
-and how the data is compiled will be provided ASAP.
 
 ## Psuedocode
 This source code can be considered a semi-automated image analysis pipeline for quantifying the density of paired and
