@@ -263,15 +263,37 @@ as shown below.
 
 ### Outputs
 Following the completion of this code run, there will be two CSV files added to the SAR.Results folder, shown below, within a timestamped subfolder. These
-files are the XYZSummary sheet that contains an entry for 
+files are the XYZSummary sheet that contains an entry for surface that was analyzed across all images in the batch and a BatchSummary sheet that has a summary
+of the image-level metrics for every image analyzed.
 
+![Screenshot of the timestamped results folder generated during this step.](/Assets/3_CompileXYZDataScreenshots/3_SynAnalyzer_CompileXYZData_Screenshot_7.png)
 
+![Screenshot of the BatchSummary file generated during this step.](/Assets/3_CompileXYZDataScreenshots/3_SynAnalyzer_CompileXYZData_Screenshot_8.png)
 
+![Screenshot of the XYZSummary file generated during this step.](/Assets/3_CompileXYZDataScreenshots/3_SynAnalyzer_CompileXYZData_Screenshot_9.png)
 
+### Screenshots for key computational steps
+1. The notebook includes a user specified threshold for the tdT intensity (threshAutoTdT) used to automatically classify PSDs as tdT+ or tdT-. We determined this
+   value empirically by analyzing the distribution of all normalized tdT intensities across all PSDs in the control data set (see manuscript for details).
 
+![Screenshot of the beginning of the Python notebook and user specified variables.](/Assets/3_CompileXYZDataScreenshots/3_SynAnalyzer_CompileXYZData_Screenshot_1.png)
 
+2. The notebook will display all of the available CSV files as a way of helping the user double check that all data is accessible.
 
+![Screenshot of notebook code showing a list of all CSV files that will be compiled.](/Assets/3_CompileXYZDataScreenshots/3_SynAnalyzer_CompileXYZData_Screenshot_2.png)
 
+3. The notebook uses the threshold described above in the autoclassification step. Once all surfaces have been analyzed and added to the master dataframe, the code
+   finds the median volume in the control dataset across all available images.
+
+![Screenshot of notebook code showing the autoclassification and control median volume normalization steps.](/Assets/3_CompileXYZDataScreenshots/3_SynAnalyzer_CompileXYZData_Screenshot_3.png)
+
+4. Once these two calculations are complete, the code computes values at the image level and compiles this information into a separate dataframe.
+
+![Screenshot of notebook code beginning image level computations.](/Assets/3_CompileXYZDataScreenshots/3_SynAnalyzer_CompileXYZData_Screenshot_4.png)
+
+![Screenshot of notebook code continuing image level computations.](/Assets/3_CompileXYZDataScreenshots/3_SynAnalyzer_CompileXYZData_Screenshot_5.png)
+
+![Screenshot of notebook code completing image level computations and saving all data.](/Assets/3_CompileXYZDataScreenshots/3_SynAnalyzer_CompileXYZData_Screenshot_6.png)
 
 ## Step 5: Statistical Analysis
 We recommend importing the data saved in Batch Master and XYZSummary files into Prism for statistical analysis. It is also
