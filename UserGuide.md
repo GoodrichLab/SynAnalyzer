@@ -193,30 +193,50 @@ The screenshots below are provided to assist potential users with navigating the
 
 ![Screenshot of option to generate PostSyn terminal thumbnails.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_11.png)
 
-7. 
+7. Once all desired thumbnails are generated, the user is given the choice to proceed with array generation for each available set of thumbnails.
 
+![Screenshot of option to generate arrays.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_12.png)
 
+8. Following array generation, the user has the option to go through array review. In this step, an image stack is created for the user to flip
+   through. The stack contains three arrays, one array for each channel and a merge of the two.
 
+![Screenshot of option to review arrays.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_13.png)
 
+9. During the array scoring step, the user will need to open the XYZ CSV file in the SAR.Analysis folder for the XYZ-image pair in question. They
+   will need to manually update the synaptic and terminal status as needed for each of the thumbnails shown in the array. Note that it is not
+   critical to complete this step for every image at this runtime. The macro can be restarted at a later time and the user can skip ahead to
+   just focus on array review and complete the annotation at a later time. However, the following step in the image analysis pipeline does
+   require that all scoring is completed prior to compiling XYZ data.
 
+![Screenshot of array review for PreSyn XYZs.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_14.png)
 
+![Screenshot of array review for PostSyn XYZs.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_15.png)
 
+* If users have trouble visualizing the fluorescence signal in these arrays, they can use the brightness/contrast tool. This applies a uniform
+  adjustment to the entire array that can help with scoring but does not introduce bias since all thumbnails are adjusted equally, as shown below.
 
+![Screenshot of array review for dim terminal array.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_16.png)
 
+![Screenshot of array review for terminal array with brightness increased.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_17.png)
 
+10. Once all arrays for this image have been reviewed, the user has the option to continue with the analysis using the next available image. 
 
+![Screenshot of proceeding with batch analysis.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_18.png)
 
+* If the user chooses to proceed with batch mode, the next image filename will be shown in the log window. 
 
+![Screenshot of updated log window.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_19.png)
 
+* The user can also reboot the macro and go into "Specific Image" mode, where they choose the image to analyze from the drop down menu. The drop
+  down menu shows all available images based on their presence in the batch directory.
 
+![Screenshot of rebooting the macro.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_20.png)
 
+![Screenshot of selecting "Specific Image" analysis mode.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_21.png)
 
+![Screenshot of selecting drop down menu in "Specific Image" analysis mode.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_22.png)
 
-
-
-
-
-
+![Screenshot of updated log window.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_23.png)
 
 ## Step 4: Running the source code file 3_SynAnalyzer_CompileXYZData.ipynb
 (to be completed)
