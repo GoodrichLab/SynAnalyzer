@@ -173,9 +173,48 @@ The screenshots below are provided to assist potential users with navigating the
    position of every XYZ location in question along with its surface ID. The user will be asked to confirm that these XYZs match the image. The
    user completes this once for every set of surfaces for which there is XYZ data (i.e., "PreSyn" and "PostSyn" in the Demo).
 
-![Screenshot of XYZ-image pair confirmation for PreSyn XYZs.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_04.png)
+![Screenshot of XYZ-image pair confirmation for PreSyn XYZs.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_05.png)
 
-![Screenshot of XYZ-image pair confirmation for PostSyn XYZs.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_05.png)
+![Screenshot of XYZ-image pair confirmation for PostSyn XYZs.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_06.png)
+
+5. The user is then asked if they want to proceed with thumbnail generation for the available XYZ sets.
+
+![Screenshot of option to generate PreSyn thumbnails.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_07.png)
+
+![Screenshot of option to generate PostSyn thumbnails.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_08.png)
+
+6. Next, the user is given the choice to generate terminal thumbnails for every available XYZ set. The option is available to do this for
+   both PreSyn and PostSyn XYZ sets, but in our manuscript we only do this for the PostSyn XYZ set. To bypass this step for the PreSyn
+   XYZ set, simply change the default text in the dialogue box to "No."
+
+![Screenshot of option to generate PreSyn terminal thumbnails.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_09.png)
+
+![Screenshot of updating the default text for this option.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_10.png)
+
+![Screenshot of option to generate PostSyn terminal thumbnails.](/Assets/2_AnalyzeXYZsScreenshots/2_SynAnalyzer_AnalyzeXYZs_Screenshot_11.png)
+
+7. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
