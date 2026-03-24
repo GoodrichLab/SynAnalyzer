@@ -83,15 +83,15 @@ The preceeding steps must be completed before this notebook can be ran successfu
 whatever format the Imaris Statistics Files take. 
 
 This notebook requires the Imaris Statistics Files as inputs. An example of one of the sheets referenced in the Demo is shown below.
-![Screenshot of one page in one of the Imaris Stats files in the Demo data set](/Assets/Dependency1_ImarisStatsFile.png)
+![Screenshot of one page in one of the Imaris Stats files in the Demo data set](/Assets/1_ConvertImarisStatsScreenshots/Dependency1_ImarisStatsFile.png)
 
 ### Outputs
 After the code runs, the new XYZCSV files will be saved in a dedicated subfolder, as shown below.
-![Screenshot of the batch directory after running the ConvertImarisStatsFiles notebook](/Assets/Output_UpdatedFiles.png)
+![Screenshot of the batch directory after running the ConvertImarisStatsFiles notebook](/Assets/1_ConvertImarisStatsScreenshots/Output_UpdatedFiles.png)
 
 These files can be opened in Excel. However, users are strongly urged to not edit their contents. If necessary, fresh versions can be generated
 by rerunning the notebook and this will not impact any work already completed in steps 3 and 4 below. 
-![Screenshot of the XYZCSV files generated in this step.](/Assets/Output_XYZCSV.png)
+![Screenshot of the XYZCSV files generated in this step.](/Assets/1_ConvertImarisStatsScreenshots/Output_XYZCSV.png)
 
 ## Step 3: Running the source code file 2_SynAnalyzer_AnalyzeXYZs.ijm 
 (to be completed)
