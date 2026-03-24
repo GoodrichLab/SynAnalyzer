@@ -55,7 +55,7 @@ Completing this step requires that the information described below is available 
   * ImageName (note that the code expects all image filenames to follow the convention shown in the demo files and below)
     * Image naming convention: SampleID.TwoCharacterTurnID.TwoCharacterRegionID.Zs.NumberOfFluorescentChannelsC.czi
    
-![Screenshot of the required imaging metadata spreadsheet](/Assets/1_MetadataScreenshots/ImagingMetadataCSV.png)
+![Screenshot of the required imaging metadata spreadsheet](/Assets/0_MetadataScreenshots/ImagingMetadataCSV.png)
 
 * SynAnalyzer_BatchName.Metadata.Samples.csv (note that this is a good sheet to also track animal information and any other experiment
 data associated with the sample):
@@ -63,7 +63,7 @@ data associated with the sample):
   * AnimalID
   * Group
 
-![Screenshot of the required sample metadata spreadsheet](/Assets/1_MetadataScreenshots/SampleMetadataCSV.png)    
+![Screenshot of the required sample metadata spreadsheet](/Assets/0_MetadataScreenshots/SampleMetadataCSV.png)    
 
 ### Outputs
 The final product of this step are the spreadsheets described above, saved in CSV format, following the naming structure shown in the Demo
@@ -116,8 +116,46 @@ by rerunning the notebook and this will not impact any work already completed in
 
 ## Step 3: Running the source code file 2_SynAnalyzer_AnalyzeXYZs.ijm 
 ### Overview
+This ImageJ macro performs the most critical task in the image analysis pipeline. It reads in every XYZCSV-image file pair, generates the
+appropriate sets of thumbnails for the pair as dictated by the user, and generates a set of arrays from these thumbnails. The user reviews
+these arrays and scores each thumbnail based on the array type.
+1. PreSyn Array - Every ribbon surface is scored based on whether or not it is a synapse or is unpaired (i.e., whether it has a closely apposed
+   PSD or if the PSD is missing). 
+2. PostSyn Array - Every PSD surface is scored based on whether or not it is a synapses or is unpaired (i.e., whether it has a closely apposed
+   ribbon or if the ribbon is missing).
+3. Terminal Array - Every PSD surface is scored based on whether or not it closely overlaps with tdT signal (i.e., "Positive"), does not
+   closely overlap with tdT signal ("Negative"), or if such an assessment cannot be made ("Uncertain").
+Note that for all steps the user can enter a custom flag word such as "Garbage" to indicate that the surface was not likely to be a real synaptic
+marker punctum.
 
+### Dependencies and Inputs
+To successfully run this, all steps described must be completed. 
 
+### Outputs
+Following the successful completion of this step, the batch directory will be updated as shown in the screenshot below, containing images and analysis CSV files
+for every XYZCSV-image file pair that was analyzed. 
+* SAR.AdjTifs - These are TIF versions of the original micrograph. If the user made any brightness/contrast or background subtraction adjustments to the original
+  image they will be saved here.
+* SAR.Analysis - These are the updated XYZCSV files that include user annotations for synaptic and terminal status. Also included here is a BatchMaster file
+  used by the ImageJ macro to track analysis progress and any parameters specified by the user.
+* SAR.AnnotatedMPS - These are maximum projection images of the TIF file described above with annotations added for every XYZ location for which a thumbnail
+  was generated. These images are shown to the user to confirm that the XYZCSV file in question matches the image being analyzed.
+* SAR.MPIs - These are maximum projection images of the TIFs described above, free of any annotations.
+* SAR.Results - This folder is used in the subsequent step.
+* SAR.SynArrays - These are the arrays that compiled into stacks and shown to the user during the scoring process.
+* SAR.Thumbnails - This subdirectory contains a folder for every array generated. The subfolder contains all of the thumbnails belonging to that array. There
+  are three sets of thumbnails per array: channel 1, channel 2, merge of channel 1 and 2. In the Demo dataset they show fluorescence intensity from the
+  corresponding channels:
+ * PreSyn - Channel 1: Ribbon, Channel 2: PSD
+ * PostSyn - Channel 1: Ribbon, Channel 2: PSD
+ * Terminal - Channel 1: PSD, Channel 2: tdT
+
+![Screenshot of the batch directory following a successful run of the 2_SynAnalyzer_AnalyzeXYZs.ijm macro](/Assets/2_AnalyzeXYZsScreenshots/AnalyzeXYZs_Outputs.png)
+
+### Screenshots for Key Macro Run Steps
+The screenshots below are provided to assist potential users with navigating the interactive macro. 
+
+1. 
 
 ## Step 4: Running the source code file 3_SynAnalyzer_CompileXYZData.ipynb
 (to be completed)
