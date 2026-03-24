@@ -1,6 +1,6 @@
 # README
 ![SynAnalyzer logo showing an inner hair cell on a coordinate axes with a magnifying glass highlighting type I spiral\
-ganglion neuron terminals at the basoleratl surface of the inner hair cell.](/Assets/SynAnalyzerLogo_Small.png)
+ganglion neuron terminals at the basoleratl surface of the inner hair cell.](/Assets/0_SynAnalyzerLogo_Small.png)
 
 ## Authors and Acknowledgement
 This repository and its content were created and will be maintained by Joy Franco. However, all authors of the accompanying
