@@ -60,6 +60,9 @@ work with their own data. To run this demo, proceed with the steps below:
 outputs are saved in a known location.
 6. Follow the steps provided in the User Guide
 
+## Expected Runtime
+The exact runtime for this code will depend largely on the size of the images being analyzed and the number of xyz coordinates for which thumbnails need to be generated. For reference, the Demo image set includes an image that is 640 MB and has a total of 513 xyz coodinates. On the system described above it took approximately 30 minutes to generate all thumbnails and arrays for this image. It is expected that an additional 20 minutes is needed to analyze/score these thumbnails. The duration required scales relatively linearly with the number of xyz coordinates on this operating system such that an image of the same size with half the xyz coordinates can be run in 15 minutes with an additional 10 minutes needed for analysis.
+
 ## Instructions for use
 Please refer to the steps above under the "Demo" heading before attempting to use this code for a custom dataset.\
 Users are also strongly encouraged to review the User Guide, which includes a psuedocode description of the codes functionality.
